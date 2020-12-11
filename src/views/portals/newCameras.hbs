@@ -1,0 +1,40 @@
+<body id="body-cameras">
+  <img class="waveright" src="/recursos/images/waveright.png">
+    <a class="direction" href="/Index"><img src="/recursos/icons/arrow-left.svg"></a>
+    <div>
+        <div class="camera-container">
+            <div class="select">
+            <label for="audioSource">Audio: </label><select id="audioSource"></select>
+            </div>
+
+            <div class="select">
+                <label for="videoSource">Video: </label><select id="videoSource"></select>
+            </div>
+
+            <div class="select">
+                <label for="Paciente">Paciente: </label><select id="IdPacienteSelect">
+                    <option value="0">None</option>
+                    {{#each rows}}
+                        <option value="{{IdPaciente}}">{{Name}} {{Surname}}</option>
+                    {{/each}}
+                </select>
+            </div> 
+
+            <div id="camera">
+
+                <div class="videocameradiv">
+                    <video class="videocamera" autoplay muted playsinline></video>
+                    <button class="btn" onclick="report()"> Tomar Foto </button>
+                </div>
+                  
+                <div class="images">
+                     
+                </div>     
+            </div>
+           
+            
+            
+        </div>
+        </div>
+    <script src="/JS/video1.js"> </script>
+</body>

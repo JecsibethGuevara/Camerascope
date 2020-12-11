@@ -1,0 +1,33 @@
+
+<body>
+    <img class="wave" src="/recursos/images/wave.png">
+    <div class="blockMaker">
+        <a class="direction" href="/Index"><img src="/recursos/icons/arrow-left.svg"></a>
+    </div>
+    
+    <div class="galery-container">
+        <h1> Mis Imágenes </h1>
+        <div class="images-section">
+            {{#each rows}}
+                <div class="image-container"> 
+                    <div class="actualimage">
+                        <img id ="img"src="{{ImgData}}" alt="{{ImgName}} longdesc="{{Name}}"">
+                    </div>
+                    <h4 class="imageName">{{ImgName}}</h4>
+                 
+                    <div class="contextMenu" id="cm{{ImgId}}">
+                        <a class="item" download="Image{{ImgId}}" href="{{ImgData}}"><img src="/recursos/icons/download.svg" alt=""></a>
+                        <a class="item" href="/deleteImg/{{ImgId}}"><img src="/recursos/icons/trash-2.svg" alt=""></a>
+                    </div>
+                    
+                </div>
+                {{else}}
+                <h2 align="center"> No Images Found </h2>
+            {{/each}}
+        </div>
+    </div>
+     
+    
+</body>
+
+

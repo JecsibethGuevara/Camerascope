@@ -1,0 +1,81 @@
+<body>
+    <img class="wave" src="/recursos/images/wave.png">
+    <a class="direction" href="/Index"><img src="/recursos/icons/arrow-left.svg"></a>
+    <div class="patients-list">
+        <h1 class="display-4 text-center"> Pacientes </h1>
+            <form action="/addPacient" method="POST" id="patient-form">
+            <div class="boxone">
+                <div class="form-group">
+                    <label for="nombre"> Nombre </label>
+                    <input type="text" id="Nombre" class="form-control" name="Nombre">
+                </div>
+                 <div class="form-group">
+                    <label for="nombre"> Apellido </label>
+                    <input type="text" id="nombre" class="form-control" name="Apellido">
+                </div>
+                <div class="form-group">
+                    <label for="ID"> Cedula  </label>
+                    <input type="number" id="Cedula" class="form-control" name="Cedula">             
+                </div>
+                <div class="form-group">
+                    <label for="desc"> Descripcion  </label>
+                    <input type="text" id="Descripcion" class="form-control" name="Descripcion">             
+                </div>
+
+            </div>
+                
+                <div class="boxtwo">
+                    <div class="form-group">
+                    <label for="desc"> Telefono  </label>
+                    <input type="text" id="Descripcion" class="form-control" name="telefono">             
+                </div>
+                <div class="form-group">
+                    <label for="desc"> Edad  </label>
+                    <input type="number" id="Descripcion" class="form-control" name="edad">             
+                </div>
+                <div class="form-group">
+                    <label for="desc"> Fecha de Nacimiento  </label>
+                    <input type="date" id="Descripcion" class="form-control" name="nacimiento">             
+                </div>
+                <div class="form-group">
+                    <label for="desc"> Fecha  de Consulta  </label>
+                    <input type="date" id="Descripcion" class="form-control" name="consulta">             
+                </div>
+                
+                </div>
+                <input type="submit" value="Añadir" class="btn btn-primary btn-block">
+            </form>
+            
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cedula</th>
+                        <th> Caso </th>
+                        <th>Telefono</th>
+                        <th>Edad</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Consulta</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="patients-list">
+                    {{#each rows}}
+                        <tr>
+                            <td>{{Name}}</td>
+                            <td>{{Surname}}</td>
+                            <td>{{IdPaciente}}</td>
+                            <td>{{Caso}}</td>
+                            <td>{{Telefono}}</td>
+                            <td>{{Edad}}</td>
+                            <td>{{FechaNacimiento}}</td>
+                            <td>{{FechaConsulta}}</td>
+                            <td><a href="/deletepatient/{{IdPaciente}}" class="btn btn-danger btn-sm delete">X</a></td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+    </div>
+    <script src="/JS/app.js"></script>
+</body>

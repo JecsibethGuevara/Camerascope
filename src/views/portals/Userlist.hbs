@@ -1,0 +1,33 @@
+
+
+<body>
+    <img class="wave" src="/recursos/images/wave.png">
+    <a class="direction" href="/Configuracion"><img src="/recursos/icons/arrow-left.svg"></a>
+    <div class="patients-list">
+        <h1 class="display-4 text-center"> Lista de Usuarios </h1>
+        
+            <div>
+                
+            </div>
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Usuario</th>
+                        <th></th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="users-list">
+                    {{#each rows}}
+                        <tr>
+                            <td> {{Name}}</td> 
+                            <td> {{Username}}</td> 
+                            <td> <a href="/delete/{{Id}}" id="delete-user"><img src="/recursos/icons/user-x.svg"> </a></td> 
+                            </tr>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+    </div>
+</body>

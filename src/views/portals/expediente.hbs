@@ -1,0 +1,76 @@
+<body>
+     <img class="wave" src="/recursos/images/wave.png">
+     <a class="direction" href="/Index"><img src="/recursos/icons/arrow-left.svg"></a>
+    
+    
+		<div id="expediente">
+            
+                <div class="lab">
+                    <div class="Lablogo">
+                        <img src="{{Lablogo}}" alt="">
+                    </div>
+                    <div class="Labname">
+                        <p>Laboratorio de Patología Marín C.A.</p>
+                    </div>
+                </div>
+ 
+                <h1> Expediente</h1>
+                
+                <h3 class="exptitle"> Informacion del Paciente</h3>
+                <div class="patientsInfoSection">
+
+                    {{#each rows}}
+                        <table class="planillauno">
+                            <tr>
+                                <td>
+                                    <h4 class="thead"> Nombre </h4>
+                                    <p> {{Name}}</p>
+                                </td>
+
+                                <td>
+                                    <h4 class="thead"> Apellido </h4>
+                                    <p> {{Surname}}</p>
+                                </td>
+
+                                <td>
+                                    <h4 class="thead"> Cedula </h4>
+                                    <p> {{IdPaciente}}</p>
+                                </td>
+
+                                <td>
+                                    <h4 class="thead"> Edad </h4>
+                                    <p> {{Edad}}</p>
+                                </td>
+
+                                <td>
+                                    <h4 class="thead"> Fecha de Nacimiento </h4>
+                                    <p> {{FechaNacimiento}}</p>
+                                </td>
+                            
+                                <td>
+                                    <h4 class="thead"> Fecha de Consulta</h4>
+                                    <p>{{FechaConsulta}}</p>
+                                </td>
+
+                            </tr>
+                        </table>
+                            
+                        
+                        
+                    {{/each}}
+                </div>
+
+                <h3 class="exptitle"> Imágenes</h3>
+
+                <div class="patientsImagesSection">
+                    <div class="imgExpe">
+                        <img src="{{ImgData}}" alt="" class="images">
+                    </div>
+                </div>
+
+                <div class="DoctorsCommentsSection">
+                    <p>{{Comentario}}</p>
+                </div>
+        </div>
+    
+</body>

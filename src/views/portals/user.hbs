@@ -1,0 +1,45 @@
+<body>
+    <img class="wave" src="/recursos/images/wave.png">
+    <div class="block">
+    <form action="/Index">
+      <button type="submit" class="solidBtn"><img src="/recursos/icons/arrow-left-circle.svg" alt=""> </button>
+    </form>
+  </div>
+    <div class="patients-list">
+        <h1 class="display-4 text-center"> Pacientes </h1>
+            <form id="patient-form" class="patientForm">
+                <div class="form-group">
+                    <label for="nombre"> Nombre </label>
+                    <input type="text" id="nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="ID"> Cedula  </label>
+                    <input type="number" id="ID" class="form-control">             
+                </div>
+                <div class="form-group">
+                    <label for="desc"> Descripcion  </label>
+                    <input type="text" id="desc" class="form-control">             
+                </div>
+                <div class="form-group">
+                    <label for="fecha"> Fecha y Hora </label>
+                    <input type="datetime" id="fecha" class="form-control">                    
+                </div>
+                <input type="submit" value="Agregar " class="btn btn-primary btn-block">
+            </form>
+            
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Fecha y Hora</th>
+                        <th> ID </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="patients-list">
+
+                </tbody>
+            </table>
+    </div>
+</body>
